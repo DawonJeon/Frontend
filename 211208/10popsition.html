@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>10.CSS에서의 layout과 position에 대해서 알아보기 </title>
+  <link rel="stylesheet" href="./10position.css">
+</head>
+<!-- CSS positon 4가지 : static / relative / absolute / fixed -->
+<body>
+<!--static : 기본 설정값/ static은 offset값을 무시함/ 
+    만약 static으로 설정했다면 아무리 top,left값을 설정하더라도 전혀 움직이지 않는다. 한번 try try-->
+  <div id="d1">
+    <div id="other">other</div>
+    <div id="parent">
+          parent
+          <div id="me">me</div>
+    </div>
+  </div>
+<!--static이면서 offset값 변경해본것
+    result : offset을 주어도 전혀 바뀌지 않는다. why? static은 offset을 먹지 않으니까!!-->
+  <div id="d2"> 
+    <div id="other2">static이면서 offset변경을 통해 움직이는지 볼까? other</div>
+    <div id="parent2">
+            static. offset 변경해보았다. parent
+            <div id="me2"> static. offset 변경해보았다. me</div>
+    </div>
+  </div>
+<!--relative이면서 offset값 변경해본것
+    result : offset을 주면 원래 위치해야하는 곳을 기준으로 offset만큼 이동
+    기준 : static에서 자신의 위치기준 -->
+  <div id="d3"> 
+    <div id="other3">relative이면서 offset변경을 통해 움직이는지 볼까? other</div>
+    <div id="parent3">
+            relative. offset 변경해보았다. parent
+            <div id="me3"> relative. offset 변경해보았다. me </div>
+    </div>
+  </div>
+  <!--absolute이면서 offset값 변경해본것
+      result : offset을 주면 static이 아닌 조상의 position 위치를 기준으로 이동
+      기준 : 조상의 position 위치
+              자기 부모중에 static이 아닌 것-->
+
+  <div id="d4"> 
+    <div id="other4">absolute이면서 offset변경을 통해 움직이는지 볼까? other</div>
+    <div id="parent4">
+            absolute. offset 변경해보았다. parent
+            <div id="me4"> absoulte. offset 변경해보았다. me </div>
+    </div>
+  </div>
+
+
+  <div id="d5"> 
+    <div id="other5"> fixed이면서 offset변경을 통해 움직이는지 볼까? other</div>
+    <div id="parent5">
+            fixed. offset 변경해보았다. parent
+            <div id="me5"> fixed. offset 변경해보았다. me </div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------------------------------------------------ -->
+
+  <div class="wrap">
+    <div>first</div>
+    <div>second</div>
+    <div>third</div>
+  </div>
+
+</body>
+</html>

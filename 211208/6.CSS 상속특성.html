@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+    <style>
+        body > div {
+            color : red;
+            font-size : 30px;
+            border : 2px solid slategray;
+            padding : 30px;
+        }  
+
+        body>div>ul>li>div {
+            color : blue;
+        }
+        
+    </style>
+   <!--부모의 특성에 속하는것의 스타일이 적용되면 자식에게도 자동으로 상속됨
+    But, padding과 border와 같이 배치와 관련된 
+    boxing 요소들은 상속되지 않는다. -->
+</head>
+
+<body>
+
+    <div>
+        <span>my text is upper!</span>
+        <ul>
+            <li>
+                <spna>my text is dummy</spna>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, Consectetur adipisicing elit. Simillique accusamus, corporis, commodi, ea suscipit non?</p>
+                </div>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

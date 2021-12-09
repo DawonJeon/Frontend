@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>9. CSS font와 color 변경방법</title>
+    <style>
+        body > div {
+            font-size : 16px;
+            background-color: rgb(51, 194, 87);
+            font-family: sans-serif;
+        }
+
+        .myspan1 {
+            color: red;
+            font-size: 2em;
+        }
+        .myspan2 {
+            color: rgb(255,0,0);
+            font-size: 1.5em;
+        }
+        .myspan3 {
+            color: rgba(99, 58, 58, 0.5);
+        }
+
+        .myspan4 {
+            color: #a85757;
+            font-size: 0.1em;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div>
+        <span class = "myspan1"> my text is upper! </span>
+        <span class = "myspan2"> my text is upper! </span>
+        <span class = "myspan3"> my text is upper! </span>
+        <span class = "myspan4"> my text is upper! </span>
+        <span class = "myspan5"> my text is upper! </span>
+        <span class = "myspan6"> my text is upper! </span>
+        <span class = "myspan7"> my text is upper! </span>
+    </div>
+
+
+</body>
+</html>
+
+
+<!-- font-size 에서 em은 상대적인 값을 뜻함
+1em은 기준값에서 x1배 / 2em은 기준값에서 x2배 
+if) font-size는 16px; 2em은 16px x2를 뜻함 -->
+
+<!--color는 인터넷에서 16진수로 변환 자유자재로 할 수 있어.'
+    
+    font-family: 글꼴설정 -->

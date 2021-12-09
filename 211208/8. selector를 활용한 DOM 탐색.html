@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>8.selector를 활용한 Dom 탐색</title>
+    <style> 
+        #manyp > p:nth-child(2) {color: red}
+        #manyp > p:nth-child(7) {color: greenyellow}
+        #a div {color:palevioletred}
+        #manyp div {color: skyblue}
+        section {color:grey}
+    </style>
+</head> 
+<!--selector를 활용한 DOM탐색
+1. tag로 지정하기
+    span {          }
+    p {         }
+    div {           }
+
+2. id로 지정하기
+    #id name {           }
+
+3. class로 지정하기
+    .class name  {          }
+
+프로젝트 들어갈때 id는 같은 이름으로 여러개 쓰면 절대안됨 무조건 한개만!
+차라리 class를 여러개 주기!
+
+4. id,class요소 선택자와 함꼐 활용
+    #myid   {color : red}
+    element.classname {color : red}     = element가 특정 element인데 class이름이 classname인 것들
+    element#idname  {color : red}      =element가 특정 element인데 id가 특정 idname인 것들
+    
+    ex)
+    span#myspan { }
+    div.thisclass { }
+
+5. 그룹으로 한꺼번에 선택가능
+    h1, span, div {color : red}         =h1, span, div element들은 모두 red로 색 지정해줘
+    h1, span, div#id {color : red}          =h1, span, div중에서 아이디가 id인것들은 모두 red로 색 지정해줘
+    h1.span, div.classname {color : red}            =h1중에서 class가 span인것, div중에서 class가 classname인것들 모두 red로 색 지정해줘 
+
+6. 하위요소(자식의자식의자식)선택 => 공백으로       / 자식선택 (직계자식) => (>)
+ex) #jisu span { color : red }
+    $jisu > span { color : red }
+
+7. 같은 요소중에서 n번째 자식요소를 선택 (nth-child)
+    <div id="jisu"?
+    <h2>단락 선택</h2>
+    <p>첫번째 단락입니다. </p>
+    <p>두번째 단락입니다. </p>
+    <p>세번째 단락입니다. </p>
+    <p>네번째 단락입니다. </p>
+    #jisu > p:nth-child(2) {color: red}
+-->
+
+<body>
+    <h1 style= "color:green; font-size:60px;" >selector를 활용한 DOM 탐색</h1>
+    <section id="a">
+        <span>span안에 div를 넣었다
+            <div>결과는 어떻게 될까용?</div>
+        </span>
+    </section>
+
+    <section id="b">
+        <span>span을 먼저하고 div를 넣었다.</span>
+        <div>어떻게 될까용?</div>
+    </section>
+
+    <section id="manyp">
+        <p> 안녕, 나는 1번째 문장이야 </p>
+            <div>안에서 또 안에 1</div>
+            <div>안에서 또 안에 2</div>
+            <div>안에서 또 안에 3</div>
+        <p> 안녕, 나는 2번째 문장이야 </p>
+        <p> 안녕, 나는 3번째 문장이야 </p>
+        <p> 안녕, 나는 4번째 문장이야 </p>
+        <p> 안녕, 나는 5번째 문장이야 </p>
+        <p> 안녕, 나는 6번째 문장이야 </p>
+        <p> 안녕, 나는 7번째 문장이야 </p>
+        <p> 안녕, 나는 8번째 문장이야 </p>
+    </section>
+</body>
+</html>
+

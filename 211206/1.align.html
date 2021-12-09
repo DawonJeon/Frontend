@@ -1,0 +1,137 @@
+<!--HTML=HyperTextMArkupLanguage
+from "JS Bin site" basic markup -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>1.html에서 align</title>
+    <!-- title in head means title web browser name in window space -->
+  </head>
+  <body>
+    <p>안녕 html을 시작해볼거야</p>
+    <p>각각의 p는 어떻게 나오려나?</p>
+    <p>각각의 p는 문단이 끝나면 자동 줄바꿈이 되는군!</p>
+    <p>
+      그렇다면 p안에 <br />
+      br을 써도 되는걸까?
+    </p>
+    p문단안에 br을 써도 전혀 문제가 없군 그렇다면 p태그를 쓰지 않는다면? <br />
+    p태그를 쓰지 않아도 나오는 군<br />
+    But 문단별로 공백라인이 전혀 없어서 답답해보여
+    <br />
+    <br />
+    <a href="http://www.naver.com" target="_blank"> 나는 네이버로 갈거야 </a>
+    <!--a 태그
+        href=이동을 원하는 웹페이지의 주소 
+        target=링크된 페이지가 열리는 방법을 설정
+        target="_blank" 새 창,새 탭에서 열림/ "_self" 클릭한 화면에서 열림 
+        *My problem : 웹페이지의 주소를 http://부터 전체를 써야하는데 www.naver.com 또는 naver.com으로 적어서 버그 발생
+        *My solution : 웹페이지의 주소는 반드시 http://부터 전체 주소로 들어가야함-->
+    <p>
+      <img
+        src="imagefile/naver.image.jpg"
+        width="100"
+        height="100"
+        alt="네이버"
+        align="top"
+      />네이버로 슝슝가보자
+    </p>
+    <!--img 태그 
+        src= 사진이 저장된 주소, width= 너비 height= 높이 alt=image가 제대로 실행되지 않을시 나타나는 대체 글자
+        image파일 기준으로 HTML파일과 같은폴더/상위폴더/하위폴더에 따라 경로지정이 달라짐
+        image파일이 HTML파일과 같은 폴더에 저장되어있다면 <img src="이미지 파일명">
+        html파일이 상위폴더, image파일이 하위폴더에 있다면 <img src="하위폴더명/image파일 이름">
+        아예 각각 다른폴더위치시 <image scr="../image가 있는 파일명/image파일이름">
+        ../를 통하여 일단 상위폴더로 나간다음 다시 image폴더로 들어간다.
+        *My problem : img src저장시에 image명에.jpg를 쓰지 않아서 버그 발생 
+        *My solution : img 파일이름에 반드시 파일종류까지 풀네임으로 써야함-->
+    <p align="center">가운데 정렬로 고정</p>
+    <p align="left">
+      left 정렬로 시도해보았다. 정렬값이 아무것도 들어가지 않으면 기본적으로
+      왼쪽정렬되므로 잘 사용되지 않는 왼쪽정렬. 그러나 justify 와의 관계를
+      알아보기 위해 길게길게 적어서 둘의 차이점을 알아보도록 하자. "꽃 잎이 내
+      맘을 흔들고 꽃 잎이 내 눈을 적시고 아름다운 기억 푸른 하늘만 바라본다
+      꼬마야 약해지지마 슬픔을 혼자 안고 살지는 마 아빠야 어디를 가야 당신의
+      마음처럼 살 수 있을까 가장 큰 별이 보이는 우리 동네 따뜻한 햇살 꽃이 피는
+      봄에 그댈 위로해요 그댈 사랑해요 그대만의 노래로 뚜루뚜뚜두 두두두
+      뚜루뚜뚜두 두두두 뚜루뚜뚜두 두두두 하늘바라기 하늘만 멍하니 가장 큰
+      하늘이 있잖아 그대가 내 하늘이잖아 후회 없는 삶들 가난했던 추억 난
+      행복했다 아빠야 약해지지마"
+    </p>
+    <p align="justify">
+      justify 정렬로 시도해보았다. p태그의 attributes값인 justify는 문단이 매우
+      길어졌을때 가장자리 부분을 일정하게 맞춰주는 기능이다. 대충보면
+      왼쪽정렬(기본정렬값)과 매우 비슷해보이지만 줄바꿈이 일어난 오른쪽
+      가장자리를 비교하면 차이를 확인할 수 있으니 길게길게 적어보자. "너만 보면
+      안 좋은 기분에 햇살이 비춰 칙칙한 피부에 생기가 띄어 나 오늘도 준비한
+      말들을 말하지 못하고 그댈 보내요 잘못했어 생각에 잠 못 이뤄 괜찮다 하던
+      내가 바보인 걸 나 오늘도 아니 내일도 너 없으면 살지 못할 것 같아 정말
+      친구가 편해 너와 나의 사이 허나 사실 방 한편에 같이 찍은 사진들이 우리의
+      소중했던 날들을 기억나게 하고 널 다시 잡으라 내게 말하지 맞어 아직 난 널
+      못 잊었나 봐 내 마음 진짜 사랑은 지구상 너 하나 잘못했어"
+    </p>
+    <!--p means paragraph. 문단과 문단사이에 공백라인이 자동으로 입력됨
+        p태그의 속성에는 정렬를 의미하는 align
+        <p align="left">, <p align="center">, <p align="right">, <p align="justify"
+        justify : 맞춤정렬 / 문단이 길어졌을때 가장자리부분 일정하게 맞춰줌 -->
+    <p>
+      <img
+        src="imagefile/apeach.jpg"
+        width="200"
+        height="200"
+        alt="사진이 안나왔을때 대체로 나오는 말"
+        text-align="top"
+      />apeach in top
+    </p>
+    <p>
+      <img
+        src="imagefile/apeach.jpg"
+        width="200"
+        height="200"
+        alt="사진이 안나왔을때 대체로 나오는 말"
+        text-align="middle"
+      />apeach in middle
+    </p>
+    <p>
+      <img
+        src="imagefile/apeach.jpg"
+        width="200"
+        height="200"
+        alt="사진이 안나왔을때 대체로 나오는 말"
+        text-align="bottom"
+      />apeach in bottom
+    </p>
+    <p>
+      image top, middle, bottom 배열에서는 다음번 문단과 이미지가 전혀 섞이지
+      않는다 "It's beginning to look a lot like Christmas Everywhere you go;
+      Take a look in the five-and-ten, glistening once again With candy canes
+      and silver lanes aglow. It's beginning to look a lot like Christmas, Toys
+      in every store, But the prettiest sight to see is the holly that will be
+      On your own front door
+    </p>
+    <p>
+      <img
+        src="imagefile/apeach.jpg"
+        width="500"
+        height="500"
+        alt="사진이 안나왔을때 대체로 나오는 말"
+        text-align="right"
+      />apeach in bottom
+    </p>
+    <p>
+      image right, left 배열에서는 다음번문단이라도 이미지와 한줄로 섞인다. It's
+      beginning to look a lot like Christmas Everywhere you go; Take a look in
+      the five-and-ten, glistening once again With candy canes and silver lanes
+      aglow. It's beginning to look a lot like Christmas, Toys in every store,
+      But the prettiest sight to see is the holly that will be On your own front
+      door.
+    </p>
+    <!--image align
+        왜 이미지가 다른 파일에 있을때 ../파일이름/이미지이름 하니까 안나오지?
+        ★★ align = "left", "right" 값은 그림 양옆 여백에 자동적으로 글씨가 채워짐< image와 다른 문단의 텍스트까지 채워진다!! 
+        ★★ align = "Top" "middle" "bottom" < image와 같은 문단의 텍스트만 채워진다!!-->
+    <p>git hub등록 확인용 문장</p>
+  </body>
+</html>

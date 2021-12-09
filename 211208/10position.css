@@ -1,0 +1,108 @@
+
+
+.wrap {
+    height:3000px;
+    position: relative;
+}
+
+/* 가장 상위에 있는 클래스에 position값을 relative로 설정해주면
+그 밑에 오는 각종 클래스를 absolute로 설정해줬을때,
+html을 기준으로 자유자재로 움직일 수 있다. */
+
+#d1 {
+    border:5px solid tomato;
+    margin:10px;
+}
+
+#d2 {
+    border:5px solid tomato;
+    margin:10px;
+}
+
+#me2 {
+    left : 200px;
+    top : 100px;
+}
+
+/* static
+d1, d2 모두 static position이고 자식 element인 #me에 offset값을 주어도
+전혀 달라지는 점이 없다. ***!!!!! static은 offset변경값 전혀 먹히지 않는다. */
+
+#d3 {
+    border:5px solid skyblue;
+    margin:10px;
+}
+
+#me3 {
+    position : relative;
+    border:5px solid skyblue;
+    left : 0px;
+    top : 0px;
+}
+
+/* relative 
+본래 static에서 자신이 있었어야할 위치를 기준으로 offset값 만큼 이동한다. */
+
+/* absolute
+static이 아닌 조상의 position을 기준으로 offset만큼 이동한다.
+조상이 아닌 이웃 프레임은 관련없음. 조상이 static이 아니기만 하면 조상을 기준으로
+만약 조상이 모두 static이라면 html문서 전체를 기준으로 offset값이 적용됨 */
+#d4 {
+    position : relative;
+    border:5px solid skyblue;
+    margin:10px;
+}
+
+#me4 {
+    position : absolute;
+    border:5px solid skyblue;
+    left : 0px;
+    top : 0px;
+}
+
+/* position: absoulte를 하게 되면 부모와의 링크가 끊기면서 부모와 아예 무관해진다. 
+offset을 지우면 원래 위치로 돌아가지만 이제는 영역전체를 차지하는게아니라 content내용 만큼만 차지
+absolute는 자신의 content만큼만 크기를 갖기 때문이다. */
+
+#d5 {
+    position : relative;
+    border:5px solid darkmagenta;
+    margin:10px;
+}
+
+#me5 {
+    position : fixed;
+    border:5px solid darkorchid;
+    left : 0px;
+    top : 0px;
+}
+
+/* fixed는 스크롤을 내릴때에도 움직이지 않고 고정된 값 */
+
+/* --------------------------------------------------------------------------------------------------------
+여기서 부터 .클래스이름 > 자식 element 의 스타일부여 */
+
+.wrap > div {
+    border:1px solid gray;
+    width:100px;
+    height:100px;
+    margin:10px;
+    position: static;
+}
+
+.wrap > div:nth-child(2) {
+    color: red;
+    position: relative;
+    top:40px;
+    left:40px;
+}
+
+.wrap > div:nth-child(1) {
+    color:deeppink;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+
+/* 부모의 position을 relative로 설정해주고 자식 position을 absolte로 설정해두면
+부모의 position을 기준으로 자식의 position을 자유자재로 움직여줄 수 있다. */

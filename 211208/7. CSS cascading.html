@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>7. CSS에서의 cascading</title>
+    <style>
+        span {
+            color : red;
+        }
+
+        span {
+            color : blue;
+        }
+
+        body > div {
+            color : red;
+        }
+
+        div {
+            color : blue;
+        }
+
+        #a {
+            color : rebeccapurple;
+        }
+
+        .b {
+            color :skyblue;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <span> 내가 무슨색일까요? </span>
+    <div> 이번에는 div로 설정했는데 내가 무슨색일까요?</div>
+    <div id="a" class="b">
+        이번에는 id와 class가 동일한 노드를 가르킬때 id와 class중에 누가 이길까요? 보라색이 나오면 id가 이긴것!
+    </div>
+
+</body>
+</html>
+
+<!--CSS는 여러가지 스타일 정보를 기반으로 최종적으로 경쟁에 의해서 적절한 스타일이 반영됨.
+    1.선언 방식에 따른 차이 
+    inline > internal > external
+    
+
+    2. 같은 것을 가리키면 보통 뒤에서 선언한 것이 적용됨.
+    span {
+        color: red;
+    }
+
+    span {
+        color: blue;
+    }
+    
+        -> 뒤의 것이 적용됨
+
+    
+    3. 같은 것을 가리켜도 더욱 구체적으로 적은 것이 적용됨.
+    body > span {
+        color : red;
+    }
+
+    span {
+        color : blue;
+    }
+        -> 앞의 것이 적용됨 (구체적으로 선언한 것일수록 점수를 더 준다고 생각하면 됨.)
+
+
+    4. 높은 우선순위
+        id  >  class  >  element
+        element는 div나 p와 같은 기본요소들.
+
+
+    5. Google search "css specificity"
+    add 100 for each ID, add 10 for each class, add 1 for each element and add 1000 for style attribute.
+    Inherited values also have a specificity of 0.
+    
+-->

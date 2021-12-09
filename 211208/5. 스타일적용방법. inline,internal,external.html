@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>5. style method : inline, internal, external</title>
+  <style>
+      h1 {
+          color: maroon;
+          margin-left: 20px;
+      }
+
+      p {
+          color : green;
+      }
+      
+    body {
+          color : blue;
+          font-size : 20px;
+      }  
+
+    div > p {
+        font-size : 100px;
+    }
+    </style>
+
+    <!--body로 적용한 값을 body내부에 전체 적용됨. 단, 특정 요소가 이미 internal방식으로 지정되었다면 그건 적용안됨!-->
+  <link rel="stylesheet" type="text.css" href="main.css" />
+</head>
+<!--style적용 방법에서 inline,internal,external세가지 방법이 있다. 
+inline : html 태그 내부에서 바로 스타일 적용하는 것, 스타일 선언안하고 그냥 쓸때// tag내에 사용
+internal : html 태그 밖에서 별도로 스타일 지정해주는 것 <head>안에 <style>을 사용 // head 태그 내에 사용  
+external : Css파일을 불러와 연결하여 사용하는 것 (가장 많이 쓰임) // body내에 사용
+
+실행 우선순위는 inline > internal > external
+만약 같은 요소 ex)글씨 색상이나 글씨에 대해서 동일하게 적용한다면 우선순위가 적용됨 -->
+
+<body>
+    <span style="color:red; font-size:50px;">이건 스타일 적용중 lnline방법으로  빨간색으로 적용중</span>   <!--inline방법으로 스타일 적용-->
+    <h1> 1. 이건 internal 방식을 이용해서 html내에서 스타일 적용해보려구</h1>
+    <p> 2. 이것도 internal 방식을 이용해서 html내에서 색깔을 바꿔볼거야</p>
+    이건 태그 없는건데 style에서 body로 묶어서 해야지 
+    <div>
+        <p style="color:yellow;"> 이건 inline방법과 internal방법을 동시에 적용하는 문장!</p>
+    </div>
+</body>
+</html>
