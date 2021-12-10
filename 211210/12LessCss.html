@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Mission2</title>
+        <link rel="stylesheet" href="./12LessCss.css">
+            <title> Insert title here</title>
+            <script>
+                /*alert("조회되었습니다.")  웹브라우저 상단에 나오는 화면 */
+                console.log("Easy day is yesterday.");
+
+                document.write("Do or do not, there is no try.");
+                document.write("Do your best and wait your destiny.");
+                /* console.log는 개발자 도구에 나오고
+                document.write는 웹브라우저에 나옴*/
+                var showSentence = "Easy day is yesterday.";   /* let하고 const를 인터넷 익스프로어에서 소화를 못함 */
+                document.write(showSentence);
+                var data1 = 10.1;
+                var data2 = 5;
+                var dataSum = data1 + data2;
+                document.write("<br>");         /* html에서는 그냥 <br>을 치면 한줄띄기가 되었는데 JS에서는 무조건 document.write("<br>")이 들어가야한다. */
+                document.write(data1 + " + " + data2 + "=" + dataSum + "<br>" ); /* "<br>"만 올렸을때는 오류났고, + "<br>" 같이 했을땐 오류안남!*/
+
+
+                document.write("Javascript. <br>");
+                document.write("Javascript. <br>");
+
+                function fnAdd() {
+                    var dataSum = 1+2;
+                    return dataSum;             /* dataSum 변수는 return을 해주었으므로 함수 밖에서도 사용가능하다*/
+                }
+
+                document.write("fnAdd : " + fnAdd() + "<br>");
+
+                function showAdd() {
+                    var dataSum = 10 + 2;
+                    document.write("dataSum: " + dataSum);          /* dataSum변수는 return 값이 없으므로 함수 밖에서 사용불가능. But 함수 그 자체를 호출하는 것은 가능*/
+                }
+
+                showAdd();       
+                document.write("<br");
+
+                alert("Good day");
+            </script>
+    </head>
+
+    <body>
+
+
+    </body>
+</html>
+
+
