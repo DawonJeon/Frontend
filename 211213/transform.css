@@ -1,0 +1,41 @@
+
+
+.wrap {
+    position:relative;
+    /* 부모클래스에 transform : translate3d(10px,0,0)을 적용하면 모든 박스들이 오른쪽으로 10px이동한다. 기준 자체가 오른쪽으로 움직이기 때문에~ */
+}
+
+.box{
+    width:100px;height:100px;
+    background-color:slategray;
+    color:#fff;
+    text-align:center;
+    line-height:100px;
+    position : absolute;
+    /* position:absolute; */
+}
+
+.box:nth-child(2){
+    transform : translate3d(100px,0,0);     /* transform : translate3d(x축,y축,z축)을 적용하면 x,y,z축 으로의 + 이동을 나타냄*/
+   /* transform:translateX(100px);    translateX는 X축을 기준으로 얼만큼의 px가 옮겨짐을 뜻함!*/
+    /* transform : rotate(10deg);  이건 각도의 변형을 뜻함. 10deg는 오른쪽으로 10도 기울여짐, -10deg는 왼쪽으로 10도 기울여짐, 90deg는 완전 오른쪽으로 눕혀짐*/
+    /* left:100px; */
+}
+
+.box:nth-child(3){
+    transform:translate3d(200px,0,0);
+    /* left:0px; */
+    /* left:200px; */
+}
+
+/* 부모 클래스는 relative이고 자식 클래스는 absolute이므로, 부모클래스 기준으로 left와 top이 움직인다. 
+
+구글링 transform css
+transform : matrix
+transform : translate
+transform : scale
+transform : rotate
+transform : skew
+transform : perspective 등등
+
+transform을 쓸때는 position값이 absolute가 아니여야 한다. */

@@ -1,0 +1,16 @@
+
+.box {
+    width:100px; height:100ps;
+    background-color:slategray;
+    color: #fff;
+    text-align:center;
+    line-height:100px;
+    transition : height 2s, width 2s;
+}
+
+
+/* transition변화값 모두 한꺼번에 적용하고 싶으면
+all ls ease-in ; 으로 나타낼 수있다. 
+
+transition은 ease-in, ease-out등 다양한 적용가능 
+한번 찾아보기!!*/
