@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxing size</title>
+    <style>
+      body {
+        margin: 2rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/action_page.php">
+      First name:<br />
+      <input type="text" name="firstname" value="Mickey" /><br />
+      Last name:<br />
+      <input type="text" name="lastname" value="Mouse" /><br />
+      Comments:<br />
+      <textarea name="message" row="5" cols="30"> </textarea>
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <!-- <form action="/action_page.php">
+      이름 : <input type="text" name="st_name" /><br />
+      학번 : <input type="text" name="st_id" /><br />
+      학과 : <input type="text" name="department" /><br />
+      <input type="submit" />
+    </form> -->
+  </body>
+</html>
+
+<!--form 태그의 action속성은 폼데이터를 서버로 보낼때 해당 데이터가 도착할 url을 명시
+<form action="URL">
+
+<form action="/examples/media/action_target.php">
+    이름 : <input type="text" name="st_name"><br>
+    학번 : <input type="text" name="st_id"><br>
+    학과 : <input type="text" name="department"><br>
+    <input type="submit">
+</form>
+-->

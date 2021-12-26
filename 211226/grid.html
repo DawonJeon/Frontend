@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox와 Grid정리!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box; /*box-sizing: border-box꼭 기억하기 */
+      }
+      body {
+        font-size: 1.5rem;
+      }
+      .container {
+        display: grid; /* ★★ grid의 시작! display: grid선언 ★★ */
+        /* grid-template-columns: 40% 60%; */
+        /* grid-template-columns: 4fr 6fr; */
+        grid-template-columns: repeat(
+          3,
+          1fr
+        ); /*1fr 1fr 1fr을 쓴것과 동일한 효과*/
+        /* grid-template-columns: 200px 1fr;  200px은 고정값으로 두고 1fr영역만 증가했다가 감소하게 함! */
+
+        /*grid-auto-rows: 300px; */ /* 각각의 박스안의 글자수가 달라 높이가 달라졌을때 박스높이를 맞추고 싶다면?
+        근데 문제는 200px로 줄여서 글자가 더 크면 글자가 밖으로 튀어나온다.  */
+
+        grid-auto-rows: minmax(
+          10em,
+          auto
+        ); /* 일단 글자 없는 박스는 모두 최소 200px를 잡되, 더 많은 글자를 가지고 있다면
+        알아서 자동으로 맞춰서 늘여라! 
+        현재 폰트의 10배 높이라는 뜻, px단위보다는 em이 더욱 바람직한 단위*/
+
+        grid-gap: 1rem;
+        /* justify-items: end; */
+        /* align-items: center; */
+        background: lightgray;
+        /* 40% 60% 나 4fr 6fr이나 동일한 효과를 나타내지만 
+        grid-gap을 쓰기 위해서는 4fr, 6fr을 써야한다.
+        40%, 60% + grid-gap을 쓰면 빈공간이 늘어나면서 스크롤이 생겨 깔끔하지 X
+        4fr, 6fr + grid-gap을 쓰면 스크롤없이 깔끔하게 gap이 생긴다. */
+      }
+
+      .item {
+        background: rgba(255, 0, 0, 0.5);
+      }
+
+      .item:nth-child(1) {
+        grid-column: 1/4; /*column1행부터 4행까지 모두 차지하겠다는 뜻*/
+      }
+
+      .item:nth-child(4) {
+        grid-column: 3; /* grid-column값을 설정하여 위치를 지정가능 */
+        grid-row: 2/4;
+      }
+
+      .item:nth-child(5) {
+        /* justify-self: center; start center end로 선택가능 */
+        /* align-self: center; */
+      }
+
+      .item:nth-child(9) {
+        grid-row: 3/5;
+        grid-column: 3;
+      }
+
+      .item:nth-child(odd) {
+        background: rgba(255, 255, 0, 0.5);
+      } /* nth-child(odd)하면 홀수번째만 적용가능 */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit Beatae,
+          cumque?
+        </p>
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+        <p>Lorem ipsum dolor sit amet</p>
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+        <p>Lorem ipsum dolor</p>
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+        <p>Lorem</p>
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+      </div>
+      <div class="item">
+        <img src="lion2.png" alt="lion" />
+      </div>
+    </div>
+  </body>
+</html>
