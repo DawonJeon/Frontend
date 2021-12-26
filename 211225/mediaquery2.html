@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        /* 모든 기기 공통 css*/
+        body{ background-color: orange ;}
+
+        /* desktop 규격*/
+        
+        /* @media screen and (min-width: 1024px){
+            body { background-color: lightblue; } 
+        } */ /* desktop은 min-width, tablet과 mobile은 max-width로 사용*/
+
+        /* tablet 규격 */
+
+        /* @media screen and (max-width: 1024px){
+            body { background-color: pink; }
+        } */
+
+        /* mobile 규격 */
+
+        /* @media screen and (max-width: 540px){
+            body { background-color: navy; }
+        } */
+
+        /*가로방향 세로방향 지정가능
+        orientation: portrait , landscape(가로)로 설정가능! */
+
+        /* @media screen and (orientation : landscape){
+            body {background-color: lightblue;}
+        } */
+
+        /*미디어 유형 (media types)
+        screen부분이 미디어 유형을 결정
+        all - 기본값, 모든 미디어 유형 장치에 사용
+        print - 프린터 장치에 사용, 인쇄용 CSS를 설정
+        screen - 컴퓨터 화면, 태블릿, 스마트폰 등에 사용
+        speech - 스크린리더기가 페이지를 소리 내어 읽을 때 사용 */
+
+        h1 {color: black;}
+
+        @media print {
+            h1 {color: red;}
+        }
+
+        /*h1이 검정색으로 나오나 프린트를 하려고 누르면 h1이 빨간색으로 표현된다. */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
